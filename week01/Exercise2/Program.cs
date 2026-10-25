@@ -29,5 +29,14 @@ class Program
         {
             Console.WriteLine("F");
         }
+
+        if (grade >= 70)
+        {
+            Console.WriteLine("Congratulations! You passed the course");
+        }
+        else
+        {
+            Console.WriteLine("Try again next time.");
+        }
     }
 }
