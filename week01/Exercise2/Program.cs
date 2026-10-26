@@ -48,7 +48,14 @@ class Program
         }
 
 
-        Console.WriteLine($"{grade}{sign}");
+        if (mark >= 97 || mark < 60)
+        {
+            Console.WriteLine($"{grade}");
+        }
+        else
+        {
+            Console.WriteLine($"{grade}{sign}");
+        }
 
         if (mark >= 70)
         {
