@@ -32,25 +32,20 @@ class Program
 
         List<int> numbers = new List<int>();
 
-        int response = 1;
+        int response = -1;
 
         Console.WriteLine("Enter a list of numbers, type 0 when finished. ");
 
-        do
+        while (response != 0)
         {
-            if (response == 0)
-            {
-                break;
-            }
-            else
-            {
-                Console.Write("Enter number: ");
-                response = int.Parse(Console.ReadLine());
-                numbers.Add(response);
-            }
-            
+            Console.Write("Enter number: ");
+            response = int.Parse(Console.ReadLine());
 
-        } while (response != 0);
+            if (response != 0)
+            {
+                numbers.Add(response);   
+            }
+        };
       
         Console.Write("Numbers entered: ");
         Console.WriteLine(string.Join(", ", numbers));
@@ -73,7 +68,7 @@ class Program
         }
 
         Console.WriteLine($"The sum is {sum}.");
-        Console.WriteLine($"The average is {sum/length}");
+        Console.WriteLine($"The average is {sum/length:F3}");
         Console.WriteLine($"The largest number is {largest}.");
     }
 }
