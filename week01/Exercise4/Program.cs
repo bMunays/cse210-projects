@@ -70,5 +70,40 @@ class Program
         Console.WriteLine($"The sum is {sum}.");
         Console.WriteLine($"The average is {sum/length:F3}");
         Console.WriteLine($"The largest number is {largest}.");
+
+
+        int bestSoFar = -1;
+        foreach (int number in numbers)
+        {
+            // check if this number is larger than the best so far
+            if (response > bestSoFar)
+            {
+                // This is the best number, so save it to that variable
+                bestSoFar = response;
+            }
+        }
+
+
+        // smallest number
+        int smallestSoFar = 99999999;
+
+        foreach (int number in numbers)
+        {
+            if (number > 0 && number < smallestSoFar)
+            {
+                // We have a new smallest number
+                smallestSoFar = number;
+            }
+        }
+        Console.WriteLine($"The smallest positive number is {smallestSoFar}.");
+
+        // sorting the list
+        int[] sortedList = numbers.OrderBy(n => n).ToArray();
+
+        Console.WriteLine("The sorted list is: ");
+        foreach (int number in sortedList)
+        {
+            Console.WriteLine(number);
+        }
     }
 }
