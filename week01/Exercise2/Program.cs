@@ -6,31 +6,51 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise2 Project.");
 
-        Console.Write("Enter grade: ");
-        int grade = int.Parse(Console.ReadLine());
+        Console.Write("Enter your mark: ");
+        int mark = int.Parse(Console.ReadLine());
 
-        if (grade >= 90)
+        char grade;
+
+        // sign
+        char sign = ' ';
+        int remainder = mark % 10;
+        if (remainder >= 7)
         {
-            Console.WriteLine("A");
+            sign = '+';
         }
-        else if (grade >= 80)
+        
+        else if (remainder < 3)
         {
-            Console.WriteLine("B");
+            sign = '-';
         }
-        else if (grade >= 70)
+        
+        
+        // grade
+        if (mark >= 90)
         {
-            Console.WriteLine("C");
+            grade = 'A';
         }
-        else if (grade >= 60)
+        else if (mark >= 80)
         {
-            Console.WriteLine("D");
+            grade = 'B';
+        }
+        else if (mark >= 70)
+        {
+            grade = 'C';
+        }
+        else if (mark >= 60)
+        {
+            grade = 'D';
         }
         else
         {
-            Console.WriteLine("F");
+            grade = 'F';
         }
 
-        if (grade >= 70)
+
+        Console.WriteLine($"{grade}{sign}");
+
+        if (mark >= 70)
         {
             Console.WriteLine("Congratulations! You passed the course");
         }
