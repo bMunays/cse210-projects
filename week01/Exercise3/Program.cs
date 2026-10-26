@@ -31,11 +31,11 @@ class Program
                 {
                     if (randomNumber > response)
                     {
-                        Console.Write("Guess higher! ");
+                        Console.WriteLine("Guess higher! ");
                     }
                     else
                     {
-                        Console.Write("Guess lower! ");
+                        Console.WriteLine("Guess lower! ");
                     }
                 }
                 else
