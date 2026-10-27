@@ -12,14 +12,9 @@ class Program
         Console.Write("What is your last name? ");
         string surname = Console.ReadLine();
 
+        // empty line
+        Console.WriteLine("");
+
         Console.WriteLine($"Your name is {surname}, {name} {surname}.");
-
-        Console.Write("Enter a number: ");
-        int number = int. Parse(Console.ReadLine());
-        Console.WriteLine($"The number is {number}.");
-
-        int number = 100;
-        string numbers = number.ToString();
-        Console.WriteLine($"The string was {numbers}.");
     }
 }
