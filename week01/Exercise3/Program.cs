@@ -6,18 +6,21 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise3 Project.");
 
+        Console.WriteLine("");
+
         Console.WriteLine("----- Guess the Random Number -----");
 
         // generate the random number and store in randomNumber
         Random randomGenerator = new Random();
-        int randomNumber = randomGenerator.Next(0, 100);
 
-        int response = 0;
-        int guesses = 0;
         string playAgain = "yes";
 
         while (playAgain != "no")
         {
+            int randomNumber = randomGenerator.Next(0, 100);
+            int response = -1;
+            int guesses = 0;
+
             while (response != randomNumber)
             {
                 guesses += 1;
@@ -31,11 +34,11 @@ class Program
                 {
                     if (randomNumber > response)
                     {
-                        Console.WriteLine("Guess higher! ");
+                        Console.WriteLine("Higher ");
                     }
                     else
                     {
-                        Console.WriteLine("Guess lower! ");
+                        Console.WriteLine("Lower ");
                     }
                 }
                 else
@@ -46,7 +49,7 @@ class Program
             }
 
             Console.Write("Would you like to play again (yes/no)? ");
-            playAgain = Console.ReadLine();
+            playAgain = Console.ReadLine().ToLower(); // user might type uppercase
 
             if (playAgain == "no")
             {
