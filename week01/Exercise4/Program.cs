@@ -4,31 +4,8 @@ using System.Collections.Generic;
 class Program
 {
     static void Main(string[] args)
-    {/**
+    {
         Console.WriteLine("Hello World! This is the Exercise4 Project.");
-
-        List<int> numbers = new List<int>();
-        List<string> words = new List<string>();
-
-        // add items to the list
-        words.Add("phone");
-        words.Add("keyboard");
-        words.Add("mouse");
-
-        // get the size of the list
-        Console.WriteLine(words.Count);
-
-        // iterating through a list
-        foreach (string word in words)
-        {
-            Console.WriteLine(word);
-        }
-
-        // access items by their indices
-        for (int i = 0; i < words.Count; i++)
-        {
-            Console.WriteLine(words[i]);
-        }**/
 
         List<int> numbers = new List<int>();
 
@@ -47,8 +24,9 @@ class Program
             }
         };
       
-        Console.Write("Numbers entered: ");
-        Console.WriteLine(string.Join(", ", numbers));
+        // print the list of numbers entered
+        // Console.Write("Numbers entered: ");
+        // Console.WriteLine(string.Join(", ", numbers));
 
 
         // get length of numbers list
@@ -67,9 +45,13 @@ class Program
             }
         }
 
-        Console.WriteLine($"The sum is {sum}.");
-        Console.WriteLine($"The average is {sum/length:F3}");
-        Console.WriteLine($"The largest number is {largest}.");
+        // calculate average
+        // Console.WriteLine($"Sum: {sum}, Length: {length}");
+        float average = (float)sum / length;
+
+        Console.WriteLine($"The sum is: {sum}.");
+        Console.WriteLine($"The average is: {average:F3}");
+        Console.WriteLine($"The largest number is: {largest}.");
 
 
         int bestSoFar = -1;
@@ -95,7 +77,7 @@ class Program
                 smallestSoFar = number;
             }
         }
-        Console.WriteLine($"The smallest positive number is {smallestSoFar}.");
+        Console.WriteLine($"The smallest positive number is: {smallestSoFar}.");
 
         // sorting the list
         int[] sortedList = numbers.OrderBy(n => n).ToArray();
