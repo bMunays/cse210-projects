@@ -5,6 +5,9 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Exercise2 Project.");
+        
+        // print empty line
+        Console.WriteLine("");
 
         // get the student's mark
         Console.Write("Enter your mark: ");

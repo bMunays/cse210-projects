@@ -6,6 +6,9 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise1 Project.");
 
+        // print empty line
+        Console.WriteLine("");
+
         Console.Write("What is your first name? ");
         string name = Console.ReadLine();
 

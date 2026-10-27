@@ -5,10 +5,14 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Exercise5 Project.");
+
+        // print empty line
+        Console.WriteLine("");
+
         DisplayWelcome();
-        PrintUserName();
-        PromptUserNumber();
-        // SquareNumber();
+        string userName = PrintUserName();
+        int favoriteNumber = PromptUserNumber();
+        int square = SquareNumber(favoriteNumber);
         DisplayResult(userName, square);
     }
 
@@ -17,10 +21,11 @@ class Program
         Console.WriteLine("Welcome to the programme!");   
     }
 
-    static void PrintUserName()
+    static string PrintUserName()
     {
         Console.Write("Please enter your name: ");
         string userName = Console.ReadLine();
+        return userName;
     }
 
     static int PromptUserNumber()

@@ -7,6 +7,9 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise4 Project.");
 
+        // print empty line
+        Console.WriteLine("");
+
         List<int> numbers = new List<int>();
 
         int response = -1;

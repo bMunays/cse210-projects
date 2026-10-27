@@ -6,6 +6,7 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise3 Project.");
 
+        // print empty line
         Console.WriteLine("");
 
         Console.WriteLine("----- Guess the Random Number -----");
