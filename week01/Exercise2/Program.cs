@@ -6,64 +6,71 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise2 Project.");
 
+        // get the student's mark
         Console.Write("Enter your mark: ");
         int mark = int.Parse(Console.ReadLine());
 
-        char grade;
+        char letter;
 
-        // sign
+        // get sign for the grade
         char sign = ' ';
         int remainder = mark % 10;
         if (remainder >= 7)
-        {
+        { 
             sign = '+';
         }
-        
         else if (remainder < 3)
         {
             sign = '-';
         }
+        else
+        {
+            sign = ' ';
+        }
         
         
-        // grade
+        // decide grade
         if (mark >= 90)
         {
-            grade = 'A';
+            letter = 'A';
         }
         else if (mark >= 80)
         {
-            grade = 'B';
+            letter = 'B';
         }
         else if (mark >= 70)
         {
-            grade = 'C';
+            letter = 'C';
         }
         else if (mark >= 60)
         {
-            grade = 'D';
+            letter = 'D';
         }
         else
         {
-            grade = 'F';
+            letter = 'F';
         }
 
 
+        // assign sign next to grade where applicable and print
         if (mark >= 97 || mark < 60)
         {
-            Console.WriteLine($"{grade}");
+            Console.WriteLine($"{letter}");
         }
         else
         {
-            Console.WriteLine($"{grade}{sign}");
+            Console.WriteLine($"{letter}{sign}");
         }
 
+
+        // congratulate if they passed the course (mark >= 70)
         if (mark >= 70)
         {
             Console.WriteLine("Congratulations! You passed the course");
         }
-        else
+        else // encourage them for next time.
         {
-            Console.WriteLine("Try again next time.");
+            Console.WriteLine("You did not do well in the test. Try again next time.");
         }
     }
 }
