@@ -18,7 +18,7 @@ class Program
 
         while (playAgain != "no")
         {
-            int randomNumber = randomGenerator.Next(0, 100);
+            int randomNumber = randomGenerator.Next(1, 101);
             int response = -1;
             int guesses = 0;
 
