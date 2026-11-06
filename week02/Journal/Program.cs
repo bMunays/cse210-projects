@@ -40,6 +40,30 @@ class Program
                     newEntry._entryText = response;
                     journal.AddEntry(newEntry);
                     break;
+
+                case "2":
+                    journal.DisplayAll();
+                    break;
+
+                case "3":
+                    Console.Write("What is the filename? ");
+                    string loadFile = Console.ReadLine();
+                    journal.LoadFromFile(loadFile);
+                    break;
+
+                case "4":
+                    Console.Write("What is the filename? ");
+                    string saveFile = Console.ReadLine();
+                    journal.SaveToFile(saveFile);
+                    break;
+
+                case "5":
+                    running = false;
+                    break;
+
+                default:
+                    Console.Write("Invalid option. Please, enter a number from 1 to 5");
+                    break;
             }
         }
     }
