@@ -24,6 +24,23 @@ class Program
             Console.WriteLine("4. Save");
             Console.WriteLine("5. Quit");
             Console.Write("What would you like to do? ");
+
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    string prompt = promptGenerator.GetRandomPrompt();
+                    Console.WriteLine(prompt);
+                    string response = Console.ReadLine();
+
+                    Entry newEntry = new Entry();
+                    newEntry._date = DateTime.Now.ToShortDateString();
+                    newEntry._promptText = prompt;
+                    newEntry._entryText = response;
+                    journal.AddEntry(newEntry);
+                    break;
+            }
         }
     }
 }
