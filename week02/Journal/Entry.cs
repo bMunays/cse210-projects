@@ -6,6 +6,7 @@ public class Entry()
 
     public void Display()
     {
+        // from week02: Working with dates in C#
         Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
         Console.WriteLine($"{_entryText}");
     }

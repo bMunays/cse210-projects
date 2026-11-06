@@ -26,6 +26,7 @@ public class Journal
 
     public void SaveToFile(string file)
     {
+        // from week02: Writing Text Files in C#
         using (StreamWriter outputFile = new StreamWriter(file))
         {
             foreach (Entry entry in _entries)
@@ -45,11 +46,12 @@ public class Journal
 
         _entries.Clear(); // clear entries
 
+        // from week02: Reading Text Files in C#
         string[] lines = File.ReadAllLines(file);
 
         foreach (string line in lines)
         {
-            string[] parts = line.Split("~~");
+            string[] parts = line.Split("~~"); // from journal programme demo video
 
             if (parts.Length == 3)
             {

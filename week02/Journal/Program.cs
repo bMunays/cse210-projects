@@ -29,7 +29,7 @@ class Program
 
             switch (choice)
             {
-                case "1":
+                case "1": // write a new entry
                     string prompt = promptGenerator.GetRandomPrompt();
                     Console.WriteLine(prompt);
                     string response = Console.ReadLine();
@@ -41,17 +41,17 @@ class Program
                     journal.AddEntry(newEntry);
                     break;
 
-                case "2":
+                case "2": // display the Journal
                     journal.DisplayAll();
                     break;
 
-                case "3":
+                case "3": // load journal from text file
                     Console.Write("What is the filename? ");
                     string loadFile = Console.ReadLine();
                     journal.LoadFromFile(loadFile);
                     break;
 
-                case "4":
+                case "4": // save to Journal
                     Console.Write("What is the filename? ");
                     string saveFile = Console.ReadLine();
                     journal.SaveToFile(saveFile);
