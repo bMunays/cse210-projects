@@ -1,4 +1,7 @@
-
+// To exceed the core requirements, 
+// I added the ability to capture and save additional information in the journal entry. 
+// To be specific, I added a "mood" tracker that prompts the user for their current mood when writing a new entry, 
+// stores it in the Entry object, and properly saves and loads this extra data context to and from the text file. 
 
 using System;
 using System.Diagnostics;
