@@ -36,10 +36,14 @@ class Program
                     Console.WriteLine(prompt);
                     string response = Console.ReadLine();
 
+                    Console.Write("What is your current mood? ");
+                    string mood = Console.ReadLine();
+
                     Entry newEntry = new Entry();
                     newEntry._date = DateTime.Now.ToShortDateString();
                     newEntry._promptText = prompt;
                     newEntry._entryText = response;
+                    newEntry._mood = mood; // save mood
                     journal.AddEntry(newEntry);
                     break;
 
