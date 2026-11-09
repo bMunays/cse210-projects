@@ -53,12 +53,13 @@ public class Journal
         {
             string[] parts = line.Split("~~"); // from journal programme demo video
 
-            if (parts.Length == 3)
+            if (parts.Length == 4) // updated from 3 to 4
             {
                 Entry entry = new Entry();
                 entry._date = parts[0];
                 entry._promptText = parts[1];
                 entry._entryText = parts[2];
+                entry._mood = parts[3]; // load mood
                 _entries.Add(entry);
             }
         }
