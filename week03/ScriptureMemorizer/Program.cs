@@ -1,7 +1,8 @@
-// To exceed core requirements, I modified the HideRandomWords method in the Scripture class 
-// so that it only selects from words that are not already hidden. 
-// This ensures the program doesn't waste cycles trying to hide words that 
-// have already been replaced by underscores.
+// To exceed the core requirements,
+// 1. I added List<Scripture> in Program.cs so that the program randomly 
+//    selects one scripture to present to the user each run.
+// 2. The HideRandomWords method in the Scripture class now filters out words 
+//    that are already hidden so that only visible words are randomly selected.
 
 
 using System;
