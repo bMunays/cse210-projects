@@ -38,7 +38,7 @@ public class Video
     {
         Console.WriteLine($"Title: {_title}");
         Console.WriteLine($"Author: {_author}");
-        Console.WriteLine($"Length: {_length}");
+        Console.WriteLine($"Length: {_length}s");
         Console.WriteLine($"Number of comments: {GetNumberOfComments()}");
         Console.WriteLine($"Comments: ");
 
